@@ -1,0 +1,12 @@
+<pre>
+欢迎使用本后台管理系统，本系统前端架构
+- Webpack
+- Admin-LTE（BootStrap）
+- Jquery
+- 路由： SME-Routers
+</pre>
+<style>
+pre {
+    padding-top: 20px;
+}
+</style>
