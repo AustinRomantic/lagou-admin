@@ -1,0 +1,8 @@
+$inlineblock: inline-block;
+
+.dropdown-toggle {
+    .hidden-xs {
+        display: $inlineblock;
+        height: 100%;
+    }
+}

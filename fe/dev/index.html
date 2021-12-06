@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 一个基于 bootstrap 的轻量级后台模板  </title>
-  <meta name="keyword" content="AdminLTE 2 一个基于 bootstrap 的轻量级后台模板 中文版 汉化版 bootstrap3.3.6 后台页面框架"/>
-  <meta name="description" content="AdminLTE 2 一个基于 bootstrap 的轻量级后台模板 中文版 汉化版 bootstrap3.3.6 后台页面框架"/>
+  <title>lagou admin  </title>
+  <meta name="keyword" content="拉勾网的后台管理系统"/>
+  <meta name="description" content="拉勾网的后台管理系统"/>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -58,9 +58,9 @@ var _hmt = _hmt || [];
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>Lagou</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Lagou</b>管理系统</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -265,46 +265,8 @@ var _hmt = _hmt || [];
             </ul>
           </li>
           <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="./public/images/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="./public/images/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">花朵</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">销量</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">好友</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">设置</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">退出</a>
-                </div>
-              </li>
-            </ul>
+          <li class="dropdown user user-menu" id="user-menu">
+            
           </li>
           <!-- Control Sidebar Toggle Button -->
           <li>
@@ -342,182 +304,15 @@ var _hmt = _hmt || [];
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">主导航</li>
-        <li class="active treeview">
-          <a href="#">
-            <i class="fa fa-dashboard"></i> <span>仪表盘</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="active"><a href="http://adminlte.la998.com/v3/index.html"><i class="fa fa-circle-o"></i> AdminLTE v3</a></li>
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> 仪表盘 v1</a></li>
-            <!-- <li><a href="index2.html"><i class="fa fa-circle-o"></i> 仪表盘 v2</a></li> -->
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>布局选项</span>
-            <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>顶部导航</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> 盒子</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> 定位</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> 可折叠侧边栏</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>小部件</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-green">new</small>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>图表</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <!-- <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> JS图表</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris图表</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot图表</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> 线性图表</a></li> -->
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-laptop"></i>
-            <span>UI 元素</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> 常规</a></li>
-            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> 图标</a></li>
-            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> 按钮</a></li>
-            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> 滑动</a></li>
-            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> 时间轴</a></li>
-            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> 模块</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-edit"></i> <span>表单</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> 常规元素</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> 高级元素</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> 编辑</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>表格</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> 简单表格</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> 数据表格</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="pages/calendar.html">
-            <i class="fa fa-calendar"></i> <span>日历</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
-            </span>
-          </a>
-        </li>
-        <li>
-          <a href="pages/mailbox/mailbox.html">
-            <i class="fa fa-envelope"></i> <span>邮箱</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">12</small>
-              <small class="label pull-right bg-green">16</small>
-              <small class="label pull-right bg-red">5</small>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>样例</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> 发票单据</a></li>
-            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> 设置</a></li>
-            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> 登陆</a></li>
-            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> 注册</a></li>
-            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> 锁屏</a></li>
-            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
-          </ul>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-share"></i> <span>多级菜单</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> 一级菜单</a></li>
-            <li>
-              <a href="#"><i class="fa fa-circle-o"></i> 一级菜单
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> 二级菜单</a></li>
-                <li>
-                  <a href="#"><i class="fa fa-circle-o"></i> 二级菜单
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> 三级菜单</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> 三级菜单</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> 一级菜单</a></li>
-          </ul>
-        </li>
-        <li><a href="documentation/index.html"><i class="fa fa-book"></i> <span>文档</span></a></li>
-        <li class="header">标签</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>重要</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>警告</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>消息</span></a></li>
+        <li class="nav active"><a href="/#/"><i class="fa fa-book"></i> <span>首页</span></a></li>
+        <li class="nav"><a href="/#/position"><i class="fa fa-book"></i> <span>文档</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" id="router-view">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
@@ -1229,7 +1024,7 @@ var _hmt = _hmt || [];
 <!-- jQuery 2.2.3 -->
 <script src="./public/libs/jquery-2.2.3.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="./public/libs/jquery-ui.min.js"></script>
+<script src="../public/libs/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button);

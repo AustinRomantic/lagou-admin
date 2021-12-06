@@ -1,9 +1,12 @@
 import SMERouter from 'sme-router'
 
-const router = new SMERouter('router-view') 
+const router = new SMERouter('router-view','hash') 
+const routerUser = new SMERouter('user-menu', 'hash')
 
 import Home from '../controllers/home.js'; 
 import Position from '../controllers/position.js';
+
+import User from '../controllers/user.js';
 // res.render('djq, 36k,fighting!')只能渲染简单的字符串
 // router.route('/', (req, res, next) => {
 //     const { params, query, body , url, route } = req
@@ -30,4 +33,7 @@ router.route('/position', Position.render)
 
 // 将页面重定向
 router.redirect('/')
+
+routerUser.route('/', User.render)
+
 export default router;

@@ -16,7 +16,12 @@ module.exports = {
     devServer: {
         // 本地启动的根目录
         static: path.resolve(__dirname, '../dev'),
-        port: 8083
+        port: 8083,
+        proxy: {
+           "/api": {
+                target: 'http://localhost:3000'
+            } 
+        }     
     },
     // 插件
     plugins: [
@@ -34,13 +39,16 @@ module.exports = {
     ],
     // loaders
     module: {
-        rules:  [{
-            test: /\.art$/,
-            loader: "art-template-loader",
-            options: {
-                // art-template options (if necessary)
-                // @see https://github.com/aui/art-template
-            }
-        }]
+        rules: [
+            {
+                test: /\.art$/,
+                exclude: /node_modules/,
+                loader: "art-template-loader"
+            }, 
+            {
+                test: /\.(scss|css)$/,
+                use: ['style-loader','css-loader', 'sass-loader']
+            },
+        ]
     }
 }
