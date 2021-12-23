@@ -29,7 +29,7 @@ module.exports = {
             //     })
             // })
             res.json({
-                msg: "用户已用户注册成功注册",
+                msg: "用户已注册成功",
                 status: 200,
                 data: result
             })
@@ -54,23 +54,14 @@ module.exports = {
         let result = await userModel.findone(username)
         if (result) {
             let resCompare = await tools.comparePassword(password, result.password);
-            if (resCompare) { 
-                // res.render('succ.ejs', {
-                //     data: JSON.stringify({
-                //         'msg': '用户登陆成功'
-                //     })
-                // })
+            if (resCompare) {
+                req.session.username = username;
                 res.json({
                     msg: "用户登陆成功",
                     status: 200,
                     data: result
                 })
             } else {
-                // res.render('succ.ejs', {
-                //     data: JSON.stringify({
-                //         msg: '用户名或密码错误'
-                //     })
-                // })
                 res.json({
                     msg: "用户名或密码错误",
                     status: 200,
@@ -88,5 +79,38 @@ module.exports = {
                 status: 200
             })
         }
+    },
+    async isSignIn(req, res, next) {
+        if (req.session.username) {
+            // next();
+            res.json({
+                msg: "用户名已登陆",
+                status: 200,
+                data: {
+                    login: true,
+                    username: req.session.username
+                }
+            })
+            
+        } else {
+            res.json({
+                msg: "用户名未登陆",
+                status: 200,
+                data: {
+                    login: false
+                }
+            })
+       }
+        
+    },
+    async signout(req, res, next) {
+        req.session = null;
+        res.json({
+            msg: "用户登出成功",
+            status: 200,
+            data: {
+                login: false,username: ''
+            }
+        })
     }
 }
