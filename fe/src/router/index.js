@@ -30,6 +30,9 @@ router.use((req, res, next) => {
 
 router.route('/', Home.render)
 router.route('/position', Position.render)
+router.route('/position_add', Position.add)
+router.route('/position_edit', Position.edit)
+
 
 // 将页面重定向
 router.redirect('/')

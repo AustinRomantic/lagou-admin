@@ -1,38 +1,78 @@
- <div class="box">
-    <div class="box-header with-border">
-        <h3 class="box-title">Bordered Table</h3>
-    </div>
-    <!-- /.box-header -->
-    <div class="box-body">
-        <table class="table table-bordered">
-        <tr>
-            <th style="width: 10px">#</th>
-            <th>Task</th>
-            <th>Progress</th>
-            <th style="width: 40px">Label</th>
-        </tr>
-        {{each list}}
-        <tr>
-            <td>{{$index+1}}.</td>
-            <td>{{$value.task}}</td>
-            <td>
-            <div class="progress progress-xs">
-                <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+<div class="col-xs-12" style="margin-top:20px;">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">职位列表页</h3>
+
+              <div class="box-tools">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
             </div>
-            </td>
-            <td><span class="badge bg-red">55%</span></td>
-        </tr>
-        {{/each}}
-        </table>
-    </div>
-    <!-- /.box-body -->
-    <div class="box-footer clearfix">
-        <ul class="pagination pagination-sm no-margin pull-right">
-        <li><a href="#">&laquo;</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">&raquo;</a></li>
-        </ul>
-    </div>
-</div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+            <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default" id="add_position_btn">添加</button>
+                  </div>
+              <table class="table table-hover">
+                <tr>
+                  <th>ID</th>
+                  <th>公司logo</th>                  
+                  <th>公司名称</th>
+                  <th>职位名称</th>
+                  <th>发布日期</th>
+                  <th>更新日期</th>
+                  <th>工作地点</th>
+                  <th>预期薪资</th>
+                  <th>操作</th>
+                </tr>
+                {{each list}}
+                <tr>
+                    <td>{{$index+1}}.</td>
+                    <td>{{$value.companyName}}</td>
+                    <td>
+                    {{$value.companyName}}
+                    </td>
+                    <td>{{$value.positionName}}</td>
+                    <td>{{$value.createTime || '-'}}</td>
+                    <td>{{$value.updateTime || '-'}}</td>
+                    <td>{{$value.workPlace || '-'}}</td>
+                    <td>{{$value.money || '-'}}</td>
+                    <td>
+                      <button class="btn btn-primary btn-update" data-id="{{$value._id}}">编辑</button>
+                      <button class="btn btn-primary btn-delete" data-id="{{$value._id}}">删除</button>
+                    </td>
+                </tr>
+                {{/each}}
+              </table>
+
+            </div>
+            <!-- /.box-footer -->
+            <div class="box-footer clearfix">
+            <span> 共计 {{total}}条数据</span>
+            
+                <ul id="pagination" class="pagination pagination-sm no-margin pull-right">
+                  
+                  <li>
+                    <a href="#" aria-label="Previous">
+                      &laquo;
+                    </a>
+                  </li>
+                  {{each pageCount}}
+                  <li data-index="{{$index}}" class="{{if pageNum === $index}}active{{/if}}"><a href="#" >{{$value + 1 }}</a></li>
+                  {{/each}}
+                  <li>
+                    <a href="#" aria-label="Next">
+                      <span aria-hidden="true">&raquo;</span>
+                    </a>
+                  </li>
+                </ul>
+            </div>
+           
+          </div>
+          <!-- /.box -->
+        </div>

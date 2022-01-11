@@ -82,7 +82,6 @@ module.exports = {
     },
     async isSignIn(req, res, next) {
         if (req.session.username) {
-            // next();
             res.json({
                 msg: "用户名已登陆",
                 status: 200,
